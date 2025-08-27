@@ -1,0 +1,152 @@
+:root {
+  --bg: #f3f4f6;
+  --text: #163457;
+  --primary: #F9C80E;
+  --primary-hover: #fada65;
+  --success: #16a34a;
+  --success-hover: #15803d;
+}
+
+/* Contenedor principal */
+.test-container {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título */
+.test-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Instrucciones */
+.test-instructions {
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+.test-instructions ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Formulario */
+.test-form {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Preguntas */
+.question-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+.question-text {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+.options {
+  display: flex;
+  gap: 0.75rem;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Botones */
+.btn-submit,
+.btn-retry {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn-submit {
+  background: var(--primary);
+  color: white;
+}
+.btn-submit:hover {
+  background: var(--primary-hover);
+}
+
+.btn-retry {
+  background: var(--success);
+  color: white;
+}
+.btn-retry:hover {
+  background: var(--success-hover);
+}
+
+/* Resultados */
+.result-card {
+  margin-top: 2rem;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.result-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.result-description {
+  margin-bottom: 1rem;
+}
+.result-score {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* 📱 Responsivo: 320px–480px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .test-container {
+    padding: 1rem;
+  }
+
+  .test-title {
+    font-size: 1.4rem;
+  }
+
+  .test-instructions {
+    font-size: 1rem;
+  }
+
+  .question-card {
+    padding: 0.8rem;
+  }
+
+  .options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-submit,
+  .btn-retry {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}

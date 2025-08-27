@@ -1,0 +1,136 @@
+:root {
+  --bg: #f3f4f6;
+  /* gris claro */
+  --text: #1f2937;
+  /* gris oscuro */
+  --blue: #1e40af;
+  /* azul base */
+  --blue-hover: #1d4ed8;
+  /* azul hover */
+  --green: #F9C80E;
+  /* verde base */
+  --green-hover: #c39b0d;
+  /* verde hover */
+}
+
+/* Contenedor principal */
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+    padding: 16px;
+    text-align: center;
+}
+
+/* Título y descripción */
+.home-title {
+    font-size: 2rem;
+    /* ~32px */
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    /* 40px */
+}
+
+.home-description {
+    font-size: 1.125rem;
+    /* ~18px */
+    margin-bottom: 2rem;
+    /* 32px */
+    max-width: 44ch;
+    /* similar a max-w-md */
+    line-height: 1.5;
+}
+
+/* Botonera */
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    /* 24px */
+    width: 16rem;
+    /* 256px (w-64) */
+    max-width: 90%;
+    align-items: stretch;
+}
+
+/* Botones */
+.btn {
+    appearance: none;
+    border: 0;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    /* 16–24px */
+    font-weight: 600;
+    font-size: 1.0625rem;
+    /* ~17px */
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 120ms ease, box-shadow 200ms ease, background-color 160ms ease;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.18);
+    outline-offset: 2px;
+}
+
+/* Variantes */
+.btn-blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background: var(--blue-hover);
+}
+
+.btn-green {
+    background: var(--green);
+    color: #fff;
+}
+
+.btn-green:hover {
+    background: var(--green-hover);
+}
+
+/* 📱 Móviles pequeños: 320–480px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .home {
+        padding: 12px;
+    }
+
+    .home-title {
+        font-size: 1.5rem;
+        /* ~24px */
+        margin-bottom: 1rem;
+        /* 16px */
+    }
+
+    .home-description {
+        font-size: 0.95rem;
+        /* ~15px */
+        margin-bottom: 1.25rem;
+        /* 20px */
+    }
+
+    .home-buttons {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        /* 16px */
+        padding: 0.9rem 1rem;
+        border-radius: 10px;
+    }
+}
